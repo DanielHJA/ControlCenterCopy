@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B15695820FBECAE00753184 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B15695720FBECAE00753184 /* Arrow.swift */; };
 		7B18095B20FA453F009B0852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B18095A20FA453F009B0852 /* AppDelegate.swift */; };
 		7B18095D20FA453F009B0852 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B18095C20FA453F009B0852 /* ViewController.swift */; };
 		7B18096020FA453F009B0852 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B18095E20FA453F009B0852 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		7B18097020FA453F009B0852 /* ControlCenterCopyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B18096F20FA453F009B0852 /* ControlCenterCopyTests.swift */; };
 		7B18097B20FA453F009B0852 /* ControlCenterCopyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B18097A20FA453F009B0852 /* ControlCenterCopyUITests.swift */; };
 		7B18098920FA47F7009B0852 /* ControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B18098820FA47F7009B0852 /* ControlCenterView.swift */; };
+		7B18098D20FA5814009B0852 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B18098C20FA5814009B0852 /* CustomViewController.swift */; };
+		7B18098F20FA6427009B0852 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B18098E20FA6427009B0852 /* ControlsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B15695720FBECAE00753184 /* Arrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
 		7B18095720FA453F009B0852 /* ControlCenterCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlCenterCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B18095A20FA453F009B0852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B18095C20FA453F009B0852 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		7B18097A20FA453F009B0852 /* ControlCenterCopyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterCopyUITests.swift; sourceTree = "<group>"; };
 		7B18097C20FA453F009B0852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B18098820FA47F7009B0852 /* ControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterView.swift; sourceTree = "<group>"; };
+		7B18098C20FA5814009B0852 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		7B18098E20FA6427009B0852 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,10 @@
 			children = (
 				7B18095A20FA453F009B0852 /* AppDelegate.swift */,
 				7B18095C20FA453F009B0852 /* ViewController.swift */,
+				7B18098C20FA5814009B0852 /* CustomViewController.swift */,
 				7B18098820FA47F7009B0852 /* ControlCenterView.swift */,
+				7B15695720FBECAE00753184 /* Arrow.swift */,
+				7B18098E20FA6427009B0852 /* ControlsView.swift */,
 				7B18095E20FA453F009B0852 /* Main.storyboard */,
 				7B18096120FA453F009B0852 /* Assets.xcassets */,
 				7B18096320FA453F009B0852 /* LaunchScreen.storyboard */,
@@ -265,6 +274,9 @@
 				7B18095D20FA453F009B0852 /* ViewController.swift in Sources */,
 				7B18095B20FA453F009B0852 /* AppDelegate.swift in Sources */,
 				7B18098920FA47F7009B0852 /* ControlCenterView.swift in Sources */,
+				7B18098F20FA6427009B0852 /* ControlsView.swift in Sources */,
+				7B18098D20FA5814009B0852 /* CustomViewController.swift in Sources */,
+				7B15695820FBECAE00753184 /* Arrow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

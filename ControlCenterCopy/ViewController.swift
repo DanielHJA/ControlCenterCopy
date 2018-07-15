@@ -8,25 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: CustomViewController {
 
-    private lazy var screenEdgePanRecognizer: UIScreenEdgePanGestureRecognizer = {
-        return UIScreenEdgePanGestureRecognizer(target: self, action: #selector(didPan(_ :)))
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addGestureRecognizer(screenEdgePanRecognizer)
-    }
-    
-    @objc func didPan(_ sender: UIScreenEdgePanGestureRecognizer) {
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
 
 }
 

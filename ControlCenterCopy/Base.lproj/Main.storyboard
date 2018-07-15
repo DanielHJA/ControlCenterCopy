@@ -17,18 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Jdz-si-GY8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Jdz-si-GY8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="04N-ta-mnW"/>
-                            <constraint firstItem="Jdz-si-GY8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0dZ-Gb-lEl"/>
-                            <constraint firstItem="Jdz-si-GY8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="G8r-au-CWe"/>
-                            <constraint firstItem="Jdz-si-GY8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JTd-2A-aul"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -36,7 +25,4 @@
             </objects>
         </scene>
     </scenes>
-    <resources>
-        <image name="background" width="320" height="568"/>
-    </resources>
 </document>
