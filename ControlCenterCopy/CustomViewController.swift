@@ -29,7 +29,9 @@ class CustomViewController: UIViewController, RemovalProtocol {
         if controlView == nil {
             controlView = ControlCenterView(frame: view.frame)
             controlView!.delegate = self
-            view.insertSubview(controlView!, at: 0)
+    //        view.insertSubview(controlView!, at: 0)
+            view.insertSubview(controlView!, at: self.view.subviews.count + 1)
+
             controlView!.didPan(sender: sender)
         } else {
             controlView!.didPan(sender: sender)

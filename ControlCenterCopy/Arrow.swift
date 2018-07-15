@@ -26,7 +26,6 @@ class Arrow: UIView {
     }
     
     private func commonInit() {
-        
         startPath = UIBezierPath()
         startPath.move(to: CGPoint(x: 0, y: frame.maxY / 2))
         startPath.addLine(to: CGPoint(x: frame.maxX / 2, y: frame.maxY / 2))
@@ -34,12 +33,12 @@ class Arrow: UIView {
         
         endPath = UIBezierPath()
         endPath.move(to: CGPoint(x: 0, y: frame.maxY / 2))
-        endPath.addLine(to: CGPoint(x: frame.maxX / 2, y: 0))
+        endPath.addLine(to: CGPoint(x: frame.maxX / 2, y: frame.maxY))
         endPath.addLine(to: CGPoint(x: frame.maxX, y: frame.maxY / 2))
         
         shapeLayer = CAShapeLayer()
         shapeLayer.path = startPath.cgPath
-        shapeLayer.strokeColor = UIColor.gray.cgColor
+        shapeLayer.strokeColor = UIColor.darkGray.cgColor
         shapeLayer.strokeEnd = 1.0
         shapeLayer.lineCap = kCALineCapRound
         shapeLayer.lineWidth = 6.0
@@ -54,7 +53,7 @@ class Arrow: UIView {
         let animation = CABasicAnimation(keyPath: "path")
         animation.fromValue = status == .present ? startPath.cgPath : endPath.cgPath
         animation.toValue = status == .present ? endPath.cgPath : startPath.cgPath
-        animation.duration = 0.5
+        animation.duration = 0.2
         animation.fillMode = kCAFillModeForwards
         animation.isRemovedOnCompletion = false
         shapeLayer.add(animation, forKey: "AnimateArrow")

@@ -26,22 +26,21 @@ class ControlCenterView: UIView {
     }()
     
     private lazy var arrowView: Arrow = {
-        let temp = Arrow(frame: CGRect(x: 0, y: 0, width: frame.width * 0.1, height: frame.height * 0.05))
+        let temp = Arrow(frame: CGRect(x: 0, y: 0, width: frame.width * 0.1, height: frame.height * 0.03))
         temp.alpha = 0
         controlsView.addSubview(temp)
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.centerXAnchor.constraint(equalTo: controlsView.centerXAnchor).isActive = true
         temp.topAnchor.constraint(equalTo: controlsView.topAnchor, constant: 20.0).isActive = true
-        temp.heightAnchor.constraint(equalTo: controlsView.heightAnchor, multiplier: 0.05).isActive = true
+        temp.heightAnchor.constraint(equalTo: controlsView.heightAnchor, multiplier: 0.03).isActive = true
         temp.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.1).isActive = true
         return temp
     }()
     
     private lazy var blurView: UIVisualEffectView = {
         let effect = UIBlurEffect(style: .regular)
-        let temp = UIVisualEffectView(frame: frame)
-        temp.backgroundColor = UIColor.blue
-        temp.alpha = 0
+        let temp = UIVisualEffectView(effect: effect)
+        temp.frame = bounds
         return temp
     }()
     
@@ -71,18 +70,23 @@ class ControlCenterView: UIView {
     }
     
     private func animateArrow() {
-        if controlsView.frame.origin.y < frame.height * 0.1 {
+        let origin = controlsView.frame.origin.y
+        
+        if origin < 40.0 {
             if !arrowView.isPresenting {
                 arrowView.animate(status: .present)
                 arrowView.isPresenting = true
             }
-            
-        } else if controlsView.frame.origin.y > frame.height * 0.2 {
+        }
+        
+        if origin > 60.0 {
             if arrowView.isPresenting {
                 arrowView.animate(status: .dismiss)
                 arrowView.isPresenting = false
             }
         }
+        
+        arrowView.isHidden = origin > 80.0 ? true : false
     }
     
     private func setTranslation(_ translation: CGPoint) {
@@ -92,12 +96,11 @@ class ControlCenterView: UIView {
     }
     
     private func setAlpha() {
-        let percentage = 1 - controlsView.frame.origin.y / frame.height
+        let origin = controlsView.frame.origin.y
+        let percentage = 1 - origin / frame.height
         blurView.alpha = percentage
+        arrowView.alpha = percentage
         
-        let arrowPercentage = 1 - controlsView.frame.origin.y / (frame.height / 1.5)
-        arrowView.alpha = arrowPercentage
-
     }
     
     private func animatePannedView(_ status: AnimationStatus) {

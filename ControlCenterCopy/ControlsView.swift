@@ -21,7 +21,7 @@ class ControlsView: UIView {
     }
     
     private func commonInit() {
-        backgroundColor = UIColor.red
+        backgroundColor = UIColor.clear
     }
 
 }
