@@ -99,7 +99,7 @@ class ControlCenterView: UIView {
         let origin = controlsView.frame.origin.y
         let percentage = 1 - origin / frame.height
         blurView.alpha = percentage
-        arrowView.alpha = percentage
+        arrowView.alpha = percentage 
         
     }
     
