@@ -72,7 +72,7 @@ class ControlCenterView: UIView {
         
         // First row
         
-        let recordControl = ControlView(frame: smallControl)
+        let recordControl = createControlViewWithSize(smallControl)
         controlsView.addSubview(recordControl)
         recordControl.translatesAutoresizingMaskIntoConstraints = false
         recordControl.leadingAnchor.constraint(equalTo: controlsView.leadingAnchor, constant: widthPadding).isActive = true
@@ -82,7 +82,7 @@ class ControlCenterView: UIView {
     
         // Second row
         
-        let flashLightControl = ControlView(frame: smallControl)
+        let flashLightControl = createControlViewWithSize(smallControl)
         controlsView.addSubview(flashLightControl)
         flashLightControl.translatesAutoresizingMaskIntoConstraints = false
         flashLightControl.leadingAnchor.constraint(equalTo: controlsView.leadingAnchor, constant: widthPadding).isActive = true
@@ -90,7 +90,7 @@ class ControlCenterView: UIView {
         flashLightControl.heightAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.2).isActive = true
         flashLightControl.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.2).isActive = true
 
-        let timerControl = ControlView(frame: smallControl)
+        let timerControl = createControlViewWithSize(smallControl)
         controlsView.addSubview(timerControl)
         timerControl.translatesAutoresizingMaskIntoConstraints = false
         timerControl.leadingAnchor.constraint(equalTo: flashLightControl.trailingAnchor, constant: widthPadding).isActive = true
@@ -98,7 +98,7 @@ class ControlCenterView: UIView {
         timerControl.heightAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.2).isActive = true
         timerControl.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.2).isActive = true
 
-        let calculatorControl = ControlView(frame: smallControl)
+        let calculatorControl = createControlViewWithSize(smallControl)
         controlsView.addSubview(calculatorControl)
         calculatorControl.translatesAutoresizingMaskIntoConstraints = false
         calculatorControl.leadingAnchor.constraint(equalTo: timerControl.trailingAnchor, constant: widthPadding).isActive = true
@@ -106,7 +106,7 @@ class ControlCenterView: UIView {
         calculatorControl.heightAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.2).isActive = true
         calculatorControl.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.2).isActive = true
 
-        let cameraControl = ControlView(frame: smallControl)
+        let cameraControl = createControlViewWithSize(smallControl)
         controlsView.addSubview(cameraControl)
         cameraControl.translatesAutoresizingMaskIntoConstraints = false
         cameraControl.leadingAnchor.constraint(equalTo: calculatorControl.trailingAnchor, constant: widthPadding).isActive = true
@@ -116,7 +116,7 @@ class ControlCenterView: UIView {
 
         // Screen Doubling
 
-        let screenControl = ControlView(frame: mediumControl)
+        let screenControl = createControlViewWithSize(mediumControl)
         controlsView.addSubview(screenControl)
         screenControl.translatesAutoresizingMaskIntoConstraints = false
         screenControl.leadingAnchor.constraint(equalTo: controlsView.leadingAnchor, constant: widthPadding).isActive = true
@@ -126,7 +126,7 @@ class ControlCenterView: UIView {
 
         // Rotation and nightshift
         
-        let rotationControl = ControlView(frame: smallControl)
+        let rotationControl = createControlViewWithSize(smallControl)
         controlsView.addSubview(rotationControl)
         rotationControl.translatesAutoresizingMaskIntoConstraints = false
         rotationControl.leadingAnchor.constraint(equalTo: controlsView.leadingAnchor, constant: widthPadding).isActive = true
@@ -134,7 +134,7 @@ class ControlCenterView: UIView {
         rotationControl.heightAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.2).isActive = true
         rotationControl.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.2).isActive = true
 
-        let nightShiftControl = ControlView(frame: smallControl)
+        let nightShiftControl = createControlViewWithSize(smallControl)
         controlsView.addSubview(nightShiftControl)
         nightShiftControl.translatesAutoresizingMaskIntoConstraints = false
         nightShiftControl.leadingAnchor.constraint(equalTo: rotationControl.trailingAnchor, constant: widthPadding).isActive = true
@@ -144,7 +144,7 @@ class ControlCenterView: UIView {
     
         // Interactive controls (light / sound)
         
-        let lightControl = ControlView(frame: tallcontrol)
+        let lightControl = createControlViewWithSize(tallcontrol)
         controlsView.addSubview(lightControl)
         lightControl.translatesAutoresizingMaskIntoConstraints = false
         lightControl.leadingAnchor.constraint(equalTo: screenControl.trailingAnchor, constant: widthPadding).isActive = true
@@ -152,7 +152,7 @@ class ControlCenterView: UIView {
         lightControl.heightAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.4 + heightPadding / controlsView.frame.width).isActive = true
         lightControl.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.2).isActive = true
 
-        let soundControl = ControlView(frame: tallcontrol)
+        let soundControl = createControlViewWithSize(tallcontrol)
         controlsView.addSubview(soundControl)
         soundControl.translatesAutoresizingMaskIntoConstraints = false
         soundControl.leadingAnchor.constraint(equalTo: lightControl.trailingAnchor, constant: widthPadding).isActive = true
@@ -162,7 +162,7 @@ class ControlCenterView: UIView {
     
         // TopControls
         
-        let connectivityControl = ControlView(frame: largeControl)
+        let connectivityControl = createControlViewWithSize(largeControl)
         controlsView.addSubview(connectivityControl)
         connectivityControl.translatesAutoresizingMaskIntoConstraints = false
         connectivityControl.leadingAnchor.constraint(equalTo: controlsView.leadingAnchor, constant: widthPadding).isActive = true
@@ -170,20 +170,21 @@ class ControlCenterView: UIView {
         connectivityControl.heightAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.4 + heightPadding / controlsView.frame.width).isActive = true
         connectivityControl.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.4 + widthPadding / controlsView.frame.width).isActive = true
         
-        let musicControl = ControlView(frame: largeControl)
+        let musicControl = createControlViewWithSize(largeControl)
         controlsView.addSubview(musicControl)
         musicControl.translatesAutoresizingMaskIntoConstraints = false
         musicControl.leadingAnchor.constraint(equalTo: connectivityControl.trailingAnchor, constant: widthPadding).isActive = true
         musicControl.bottomAnchor.constraint(equalTo: lightControl.topAnchor, constant: -heightPadding).isActive = true
         musicControl.heightAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.4 + heightPadding / controlsView.frame.width).isActive = true
         musicControl.widthAnchor.constraint(equalTo: controlsView.widthAnchor, multiplier: 0.4 + widthPadding / controlsView.frame.width).isActive = true
+    }
+    
+    private func createControlViewWithSize(_ size: CGRect) -> ControlView {
+        let temp = ControlView(frame: size)
+        temp.isUserInteractionEnabled = true
+        return temp
+    }
 
-    }
-    
-    @objc private func didLongPressControl(_ sender: UILongPressGestureRecognizer) {
-        
-    }
-    
     func didPan(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: self)
         

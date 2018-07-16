@@ -7,8 +7,18 @@
 //
 
 import UIKit
+enum ControlViewType {
+    case icon, interactive
+}
 
 class ControlView: UIView {
+    
+    private lazy var longPressRecogniser: UILongPressGestureRecognizer = {
+        let temp = UILongPressGestureRecognizer()
+        temp.minimumPressDuration = 0.5
+        temp.addTarget(self, action: #selector(didLongPressControl(_:)))
+        return temp
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,6 +34,19 @@ class ControlView: UIView {
         backgroundColor = UIColor.black.withAlphaComponent(0.6)
         layer.cornerRadius = 14.0
         clipsToBounds = true
+        addGestureRecognizer(longPressRecogniser)
     }
 
+    @objc private func didLongPressControl(_ sender: UILongPressGestureRecognizer) {
+        switch sender.state {
+        case .began:
+            UIView.animate(withDuration: 1.0, animations: { [unowned self] in
+                self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+            }) { (completion) in }
+        case .ended:
+            transform = CGAffineTransform.identity
+        default:
+            break
+        }
+    }
 }
