@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B15695820FBECAE00753184 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B15695720FBECAE00753184 /* Arrow.swift */; };
+		7B15695A20FC1CDD00753184 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B15695920FC1CDD00753184 /* ControlView.swift */; };
 		7B18095B20FA453F009B0852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B18095A20FA453F009B0852 /* AppDelegate.swift */; };
 		7B18095D20FA453F009B0852 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B18095C20FA453F009B0852 /* ViewController.swift */; };
 		7B18096020FA453F009B0852 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B18095E20FA453F009B0852 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		7B15695720FBECAE00753184 /* Arrow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
+		7B15695920FC1CDD00753184 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		7B18095720FA453F009B0852 /* ControlCenterCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlCenterCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B18095A20FA453F009B0852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B18095C20FA453F009B0852 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		7B18095920FA453F009B0852 /* ControlCenterCopy */ = {
 			isa = PBXGroup;
 			children = (
+				7B15695920FC1CDD00753184 /* ControlView.swift */,
 				7B18095A20FA453F009B0852 /* AppDelegate.swift */,
 				7B18095C20FA453F009B0852 /* ViewController.swift */,
 				7B18098C20FA5814009B0852 /* CustomViewController.swift */,
@@ -276,6 +279,7 @@
 				7B18098920FA47F7009B0852 /* ControlCenterView.swift in Sources */,
 				7B18098F20FA6427009B0852 /* ControlsView.swift in Sources */,
 				7B18098D20FA5814009B0852 /* CustomViewController.swift in Sources */,
+				7B15695A20FC1CDD00753184 /* ControlView.swift in Sources */,
 				7B15695820FBECAE00753184 /* Arrow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
